@@ -1,0 +1,24 @@
+{% include base_path %}
+
+{% if page.header.image contains "://" %}
+
+  {% capture img_path %}{{ page.header.image }}{% endcapture %}
+
+{% else %}
+
+  {% capture img_path %}{{ page.header.image | prepend: "/assets/images/" | prepend: base_path }}{% endcapture %}
+
+{% endif %}
+
+
+<div class="page__hero">
+
+  <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
+  
+  {% if page.header.caption %}
+
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  
+  {% endif %}
+
+</div>

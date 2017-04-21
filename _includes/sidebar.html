@@ -1,0 +1,19 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" id="nav-toggler" />
+<label for="nav-toggler"><span></span></label>
+
+<div class="nav">
+<ul class="menu">
+  <li><a class="menu-link{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/about/">About</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/contact/">Contact</a></li>
+  <li><a class="menu-link" href="https:/github.com/donquant">GitHub</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/atom.xml">Subscribe</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/terms/">Terms and Policies</a></li>
+  <li class="menu-item">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</li>
+</ul>
+</div>
+
+
+

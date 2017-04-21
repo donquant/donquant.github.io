@@ -1,0 +1,176 @@
+/*
+ *  Sidebar
+ */
+
+label[for="nav-toggler"] { 
+  position: fixed;
+  display: block;
+  top: 12.5px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 999;  
+  
+  span {
+    display: block;
+    margin: 14px 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: all $sidebar_duration ease;
+    
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: black;
+      transition: all $sidebar_duration ease;
+    }
+    
+    &:before {
+      top: 6px;
+    }
+    
+    &:after {
+      bottom: 5px;
+    }
+    
+  }
+  
+  &:hover span {
+    &, &:before, &:after {
+      background-color: #ff5c33;
+    }
+  }
+
+  @include breakpoint($medium) {
+    position: fixed;
+    display: block;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  @include breakpoint($large) {
+    position: fixed;
+    display: block;
+    top: 17.5px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  @include breakpoint($x-large) {
+    position: fixed;
+    display: block;
+    top: 20px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+input#nav-toggler {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  display: block;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 14rem;
+  overflow-y: auto;
+  font-family: "PT Sans", sans-serif;
+  background-color: #303030;
+  transition: transform $sidebar_duration ease-in-out;
+  -webkit-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#nav-toggler:checked ~ .wrap,
+#nav-toggler:checked ~ .nav {
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+
+.wrap {
+  -webkit-transition: -webkit-transform $sidebar_duration ease-in-out;
+          transition: transform $sidebar_duration ease-in-out;
+
+  @include breakpoint($sidebar_br) {
+  -webkit-transition: none;
+          transition: none;
+  }
+}
+
+#nav-toggler:checked ~ .wrap {
+
+  @include breakpoint($sidebar_br) {
+  -webkit-transform: translateX(0rem);
+      -ms-transform: translateX(0rem);
+          transform: translateX(0rem);
+  }
+
+}
+
+#nav-toggler:checked ~ label[for="nav-toggler"] {
+  span {
+    background: none;
+    
+    &:before {
+      top: 15px;
+      background-color: white;
+      transform: rotate(45deg);
+    }
+    
+    &:after {
+      bottom: 12px;
+      background-color: white;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  &:hover span {
+    &:before, &:after {
+      background-color: #ff5c33;
+    }
+  }
+}
+
+ul.menu {
+  list-style-type: none;
+  margin-top: 3.5rem;
+  background-color: #303030;
+  padding-left: 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);  
+}
+
+.menu-item,
+.menu-link {
+  display: block;
+  padding: .5rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+  color: white;
+  font-size: .975rem;
+  line-height: 3vmin;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.menu-link:hover,
+.menu-link:focus,
+.menu-link:active {
+  color: white;
+  text-decoration: none;
+  border-left: 7px solid #ff5c33;
+}

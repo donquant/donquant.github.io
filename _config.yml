@@ -1,0 +1,60 @@
+# Configuration
+
+# Setup
+locale:              "en_US"
+title:               "The Teachings of Don Quant"
+tagline:             "A Quantitative Way of Knowledge"
+description:         "Personal website of Evgeny Laba"
+repository:          "donquant/donquant.github.io"
+url:                 https://donquant.com
+baseurl:             ""
+
+# About
+author:
+  name:              Evgeny Laba
+  url:               https://donquant.com/about
+  email:             donquant73@gmail.com
+
+# Jekyll configuration
+permalink                : /:categories/:title/
+paginate                 : 5 
+lsi                      : false
+future                   : false
+show_drafts              : false
+markdown                 : kramdown
+kramdown:
+  toc_levels             : 1..4
+  input                  : GFM
+  hard_wrap              : false
+  auto_ids               : true
+  entity_output          : as_char
+  smart_quotes           : lsquo,rsquo,ldquo,rdquo
+  enable_coderay         : false
+highlighter              : rouge
+excerpt_separator        : "\n\n"
+
+# Staticman comments (full configuration in staticman.yml)
+staticman:
+  branch                 : "master"
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Plugins
+gems: 
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+include: 
+  - _pages
+
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Custom vars
+version:             1.0.0

@@ -1,0 +1,143 @@
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ========================================================================== */
+
+.toc {
+  margin: 2em 0 1.5em 0;
+  font-family: $serif;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    font-family: $serif;
+    font-size: 0.9rem;
+    color: $dark-gray;
+    position: relative;
+    display: inline-block;
+    padding: 1em 1em 1em 2.5em;
+    font-weight: 700;
+    line-height: 1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    z-index: 20;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 1em;
+      top: 1.375em;
+      width: 0.75em;
+      height: 0.125em;
+      line-height: 1;
+      background-color: #333;
+      transition: $global-transition;
+    }
+
+    &:after {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      border-color: #333;
+    }
+  }
+
+  // selected
+  input:checked + label {                
+    color: white;
+    background-color: #313131;
+
+    &:before,
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  // on hover show expand
+  label:hover:after {
+    transform: rotate(90deg);
+  }
+
+  input:checked + label:hover:after {
+    transform: rotate(0);
+  }
+}
+
+.toc__menu > ul {
+  padding: 0;
+  padding-top: .7em;
+  list-style-type: none;
+  counter-reset: section;
+
+  li {
+    display: block;
+    padding-top: .3em;
+    font-weight: normal;
+    font-size: .95rem;
+
+    a {
+      color: #313131;                   
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  > li {
+    counter-increment: section;
+    font-weight: 700;
+
+    &:before {
+      content: counter(section) ". ";
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid #ccc;
+    }
+
+    > ul {
+      padding-left: 1em;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    counter-reset: subsection;
+
+    > li {
+      counter-increment: subsection;
+
+      &:before {
+        content: counter(section) "." counter(subsection) ". ";
+      }
+    }
+  }
+}
+
+.toc .toc__menu {
+  position: relative;
+  margin: 0;
+  max-height: 0;
+  font-size: 0.8em;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  transform: translate(0, 10%);
+}
+
+.toc input:checked ~ .toc__menu {
+  transition: 0.5s ease-in-out;
+  max-height: 100vh;
+  opacity: 1;
+  margin-top: 1em;
+  transform: translate(0, 0);
+}

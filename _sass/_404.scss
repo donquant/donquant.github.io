@@ -1,0 +1,511 @@
+/*
+ *  404
+ */
+
+.errorContainer {
+  background: black;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform:translate3d(0,0,0);
+}
+.errorContainer:after {
+  border: 10px solid black;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.errorContainer .errorBackground {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap;
+  @inclide align-items(flex-start);
+  -webkit-animation: distort2 5s ease-in infinite;
+  -moz-animation: distort2 5s ease-in infinite;
+  animation: distort2 5s ease-in infinite;
+  position: relative;
+}
+.errorContainer .errorBackground:after {
+  content: "";
+  box-shadow: inset 0 0 300px black;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.errorContainer .errorBackground > div {
+  -webkit-box-flex: calc(100%/7);
+  -moz-box-flex: calc(100%/7);
+  box-flex: calc(100%/7);
+  -webkit-flex: calc(100%/7);
+  -moz-flex: calc(100%/7);
+  -ms-flex: calc(100%/7);
+  flex: calc(100%/7);
+}
+.errorContainer .errorBackground .errorTop {
+  height: 300px;
+  position: relative;
+}
+.errorContainer .errorBackground .errorTop.topGray {
+  background: #E6E6E6;
+}
+.errorContainer .errorBackground .errorTop.topYellow {
+  background: yellow;
+}
+.errorContainer .errorBackground .errorTop.topCyan {
+  background: cyan;
+}
+.errorContainer .errorBackground .errorTop.topGreen {
+  background: #00ff00;
+}
+.errorContainer .errorBackground .errorTop.topMagenta {
+  background: magenta;
+}
+.errorContainer .errorBackground .errorTop.topRed {
+  background: red;
+}
+.errorContainer .errorBackground .errorTop.topBlue {
+  background: blue;
+}
+.errorContainer .errorBackground .errorTop:after {
+  -webkit-animation: distort1b 5s ease-in infinite;
+  -moz-animation: distort1b 5s ease-in infinite;
+  animation: distort1b 5s ease-in infinite;
+  background: inherit;
+  content: "";
+  display: block;
+  height: 185px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.errorContainer .errorBackground .errorMid {
+  height: 20px;
+}
+.errorContainer .errorBackground .errorMid.midBlue {
+  background: blue;
+}
+.errorContainer .errorBackground .errorMid.midBlack {
+  background: black;
+}
+.errorContainer .errorBackground .errorMid.midMagenta {
+  background: magenta;
+}
+.errorContainer .errorBackground .errorMid.midCyan {
+  background: cyan;
+}
+.errorContainer .errorBackground .errorMid.midGray {
+  background: #E6E6E6;
+}
+.errorContainer .errorBackground .errorBtm {
+  height: 100px;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 calc(100%/6);
+  -moz-flex: 0 1 calc(100%/6);
+  -ms-flex: 0 1 calc(100%/6);
+  flex: 0 1 calc(100%/6);
+}
+.errorContainer .errorBackground .errorBtm.btmNavy {
+  background: navy;
+}
+.errorContainer .errorBackground .errorBtm.btmWhite {
+  background: white;
+}
+.errorContainer .errorBackground .errorBtm.btmPurple {
+  background: #4C0B5F;
+}
+.errorContainer .errorBackground .errorBtm.btmBlack1 {
+  background: #222;
+}
+.errorContainer .errorBackground .errorBtm.btmBlack {
+  background: black;
+}
+.errorContainer .errorForeground {
+  font-family: Helvetica, Arial, sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  width: 100%;
+}
+.errorContainer .errorForeground .errorMessage1 {
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  position: relative;
+}
+.errorContainer .errorForeground .errorMessage1 .errorMessage1Text {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
+  
+}
+.errorContainer .errorForeground .errorMessage1 .errorMessage1Text:after {
+  -webkit-animation: distort1 5s ease-in infinite;
+  -moz-animation: distort1 5s ease-in infinite;
+  animation: distort1 5s ease-in infinite;
+  content: "404";
+  display: block;
+  left: -2px;
+  position: absolute;
+  text-indent: 0;
+  top: 0;
+  width: 100%;
+
+  @include breakpoint($medium) {
+    font-size: 90%;
+  }
+
+  @include breakpoint($large) {
+    font-size: 80%;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 75%;
+  }
+
+}
+.errorContainer .errorForeground .errorMessage1 .errorMessage1Support {
+  height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+.errorContainer .errorForeground .errorMessage1 .errorMessage1Support:after {
+  -webkit-animation: distort2 5s ease-in infinite;
+  -moz-animation: distort2 5s ease-in infinite;
+  animation: distort2 5s ease-in infinite;
+  content: "404";
+  display: block;
+  left: 2px;
+  position: absolute;
+  text-indent: 0;
+  top: -60px;
+  width: 100%;
+
+  @include breakpoint($medium) {
+    font-size: 90%;
+  }
+
+  @include breakpoint($large) {
+    font-size: 80%;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 75%;
+  }
+
+}
+.errorContainer .errorForeground h2 {
+  background: black;
+  color: white;
+  display: inline-block;
+  font-family: Courier, fixed-width;
+  font-size: 2em;
+}
+
+@-webkit-keyframes distort1 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 2px;
+  }
+  40% {
+    left: -1px;
+  }
+  50% {
+    left: 2px;
+  }
+  55% {
+    left: -3px;
+  }
+  70% {
+    left: 2px;
+  }
+  72% {
+    left: -1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@-moz-keyframes distort1 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 2px;
+  }
+  40% {
+    left: -1px;
+  }
+  50% {
+    left: 2px;
+  }
+  55% {
+    left: -3px;
+  }
+  70% {
+    left: 2px;
+  }
+  72% {
+    left: -1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes distort1 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 2px;
+  }
+  40% {
+    left: -1px;
+  }
+  50% {
+    left: 2px;
+  }
+  55% {
+    left: -3px;
+  }
+  70% {
+    left: 2px;
+  }
+  72% {
+    left: -1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes distort1b {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 4px;
+  }
+  40% {
+    left: -2px;
+  }
+  50% {
+    left: 4px;
+  }
+  55% {
+    left: -6px;
+  }
+  70% {
+    left: 4px;
+  }
+  72% {
+    left: -2px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@-moz-keyframes distort1b {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 4px;
+  }
+  40% {
+    left: -2px;
+  }
+  50% {
+    left: 4px;
+  }
+  55% {
+    left: -6px;
+  }
+  70% {
+    left: 4px;
+  }
+  72% {
+    left: -2px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes distort1b {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: 4px;
+  }
+  40% {
+    left: -2px;
+  }
+  50% {
+    left: 4px;
+  }
+  55% {
+    left: -6px;
+  }
+  70% {
+    left: 4px;
+  }
+  72% {
+    left: -2px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes distort2 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: -2px;
+  }
+  40% {
+    left: 1px;
+  }
+  50% {
+    left: -2px;
+  }
+  55% {
+    left: 3px;
+  }
+  70% {
+    left: -2px;
+  }
+  72% {
+    left: 1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@-moz-keyframes distort2 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: -2px;
+  }
+  40% {
+    left: 1px;
+  }
+  50% {
+    left: -2px;
+  }
+  55% {
+    left: 3px;
+  }
+  70% {
+    left: -2px;
+  }
+  72% {
+    left: 1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes distort2 {
+  from {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  34% {
+    left: -2px;
+  }
+  40% {
+    left: 1px;
+  }
+  50% {
+    left: -2px;
+  }
+  55% {
+    left: 3px;
+  }
+  70% {
+    left: -2px;
+  }
+  72% {
+    left: 1px;
+  }
+  75% {
+    left: 0;
+  }
+  to {
+    left: 0;
+  }
+}

@@ -1,0 +1,14 @@
+{% if page.previous or page.next %}
+  <div class="pagination">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | absolute_url }}" class="pagination-item older" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+    {% else %}
+      <span class="pagination-item older">Previous</span>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url | absolute_url }}" class="pagination-item newer" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Up Next" }}</a>
+    {% else %}
+      <span class="pagination-item older">Up Next</span>
+    {% endif %}
+  </div>
+{% endif %}
