@@ -2,7 +2,7 @@
 layout: post
 title: Backtesting Dual Momentum with ETFs. Part I.
 header:
-  feature: momentum.jpg
+  feature: Momentum.jpg
 tags: 
   - Algorithmic Trading 
   - Momentum 
