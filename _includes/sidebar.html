@@ -5,12 +5,13 @@
 
 <div class="nav">
 <ul class="menu">
-  <li><a class="menu-link{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a></li>
-  <li><a class="menu-link" href="{{ site.baseurl }}/about/">About</a></li>
-  <li><a class="menu-link" href="{{ site.baseurl }}/contact/">Contact</a></li>
-  <li><a class="menu-link" href="https:/github.com/donquant">GitHub</a></li>
-  <li><a class="menu-link" href="{{ site.baseurl }}/atom.xml">Subscribe</a></li>
-  <li><a class="menu-link" href="{{ site.baseurl }}/terms/">Terms and Policies</a></li>
+  <li><a class="menu-link{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/"><svg class="icon-menu"><use xlink:href="#icon-home"></use></svg>Home</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/about/"><svg class="icon-menu"><use xlink:href="#icon-about"></use></svg>About</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/contact/"><svg class="icon-menu"><use xlink:href="#icon-mail"></use></svg>Contact</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/projects/"><svg class="icon-menu"><use xlink:href="#icon-rocket"></use></svg>Projects</a></li>
+  <li><a class="menu-link" href="https:/github.com/donquant"><svg class="icon-menu"><use xlink:href="#icon-github_v2"></use></svg>GitHub</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/atom.xml"><svg class="icon-menu"><use xlink:href="#icon-rss"></use></svg>Subscribe</a></li>
+  <li><a class="menu-link" href="{{ site.baseurl }}/terms/"><svg class="icon-menu"><use xlink:href="#icon-terms"></use></svg>Terms and Policies</a></li>
   <li class="menu-item">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</li>
 </ul>
 </div>

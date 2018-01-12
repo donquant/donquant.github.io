@@ -183,6 +183,22 @@ body:hover .visually-hidden button {
 
 }
 
+.icon-menu {
+  display: none;
+
+  @include breakpoint($large) {
+    display: inline-block;
+    fill: currentColor;
+    width: 1.4em;
+    height: 1.6em;
+    position: relative;
+    top: 0em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+
+}
+
 .emoji {
   margin: 0;
   width: 1em;

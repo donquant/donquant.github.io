@@ -59,7 +59,7 @@ label[for="nav-toggler"] {
     position: fixed;
     display: block;
     top: 17.5px;
-    left: 15px;
+    left: 17px;
     width: 30px;
     height: 30px;
   }
@@ -68,7 +68,7 @@ label[for="nav-toggler"] {
     position: fixed;
     display: block;
     top: 20px;
-    left: 15px;
+    left: 18.5px;
     width: 30px;
     height: 30px;
   }
@@ -161,10 +161,25 @@ ul.menu {
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
   color: white;
-  font-size: .975rem;
-  line-height: 3vmin;
+  font-size: 0.975rem;
+  line-height: 5vmin;
   -webkit-transition: all .25s ease-out;
   transition: all .25s ease-out;
+
+  @include breakpoint($medium) {
+    font-size: 0.975rem;
+    line-height: 3.5vmin;
+  }
+
+  @include breakpoint($large) {
+    font-size: 100%;
+    line-height: 3vmin;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 100%;
+  }
+
 }
 
 .menu-link:hover,
