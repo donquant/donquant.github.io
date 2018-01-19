@@ -2,12 +2,14 @@
 layout: post
 title: Backtesting Dual Momentum with ETFs. Part I.
 header:
-  feature: momentum.jpg
+  feature: Momentum.jpg
 tags: 
   - Algorithmic Trading 
   - Momentum 
   - Quantitative Investing 
   - R
+comments:
+  true
 ---
 
 About three years ago, in the year of 2015, I read a book by Gary Antonacci entitled ["Dual Momentum Investing"](https://www.amazon.com/Dual-Momentum-Investing-Innovative-Strategy/dp/0071849440).
