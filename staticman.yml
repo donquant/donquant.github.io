@@ -93,9 +93,4 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
-
-  # reCaptcha
-  reCaptcha:
-    enabled: true
-    siteKey: "6LchGB4UAAAAAOVeLyjs97gCyraahKa_KWlweg3Y"
-    secret: "6LchGB4UAAAAAI71X7GbpBL2ie6KsO8clj_7GXi_"
+    
