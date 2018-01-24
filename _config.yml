@@ -43,7 +43,7 @@ sass:
 style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 # Plugins
-gems: 
+plugins: 
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gist
