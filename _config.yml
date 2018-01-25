@@ -33,6 +33,12 @@ kramdown:
 highlighter              : rouge
 excerpt_separator        : "\n\n"
 
+# Analytics
+analytics:
+  provider               : "google"
+  google:
+    tracking_id          : UA-85894808-1
+
 # Staticman comments (full configuration in staticman.yml)
 staticman:
   branch                 : "master"
