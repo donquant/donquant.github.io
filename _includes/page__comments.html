@@ -5,7 +5,7 @@
       <div id="comments" class="js-comments">
         <h2 class="post__section-label">
           {% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h2>
-          {% assign comments = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == blank' %}
+          {% assign comments = site.data.comments[page.slug] | where_exp:"item", "item.replying_to == ''" | sort: 'date' %} 
           {% for comment in comments %}
             {% assign index       = forloop.index %}
             {% assign r           = comment.replying_to %}
