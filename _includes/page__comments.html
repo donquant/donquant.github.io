@@ -4,12 +4,8 @@
       <!-- Start static comments -->
       <div id="comments" class="js-comments">
         <h2 class="post__section-label">
-          {% if site.data.comments[page.slug].size > 1 %}
-            {{ site.data.comments[page.slug] | size }}
-          {% endif %}
-          Comments
-        </h2>
-        {% assign comments = site.data.comments[page.slug] | where_exp:”item”, “item.replying_to == ‘’” | sort: ‘date’ %} 
+          {% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h2>
+        {% assign comments = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == blank' %}
         {% for comment in comments %}
           {% assign index       = forloop.index %}
           {% assign r           = comment.replying_to %}
@@ -21,7 +17,7 @@
           {% assign date        = comment.date %}
           {% assign message     = comment.message %}
           {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
-      {% endfor %}
+{% endfor %}
       </div>
       <!-- End static comments -->
     {% endif %}
