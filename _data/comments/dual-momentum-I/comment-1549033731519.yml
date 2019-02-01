@@ -1,0 +1,9 @@
+_id: 4855a230-2633-11e9-b4b3-d36b3e805417
+_parent: 'https://donquant.com/dual-momentum-I/'
+message: "When i download historical data from yahoo finance , i get different adjusted price than yours. Is your adjusted price has dividend adjusted back in as well?\r\n\r\nFor real simulation, should we keep dividend in cash and reinvest when buy/sell?\r\n\r\nAlso from simulation no matter what time I start ( after 2008), SPY always catch up to GEM as GEM always miss the SPY rebound, is it because Gary not using simple TY SPY price- LY SPY price. Anyway I cannot validate GEM performance as Gary suggested.\r\n\r\nAny idea ?"
+name: Jonathan
+email: e66f3557bb7d30dc06d8c25916fd16b7
+url: ''
+replying_to: ''
+hidden: ''
+date: '2019-02-01T15:08:51.516Z'
